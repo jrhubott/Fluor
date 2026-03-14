@@ -10,7 +10,7 @@
         <scene sceneID="8tp-0P-yc1">
             <objects>
                 <windowController showSeguePresentationStyle="single" id="GhL-73-3vr" customClass="RunningAppWindowController" customModule="Fluor" customModuleProvider="target" sceneMemberID="viewController">
-                    <window key="window" title="Running Applications" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="Fluor_RunningAppsWindowAutosaveName" animationBehavior="default" id="Vdh-R9-Luc" customClass="NSPanel">
+                    <window key="window" title="Running Applications" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="Fluor_RunningAppsWindowAutosaveName" animationBehavior="default" id="Vdh-R9-Luc">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" resizable="YES" fullSizeContentView="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="312" y="145" width="320" height="480"/>

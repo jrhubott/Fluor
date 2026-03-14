@@ -137,12 +137,16 @@ class StatusMenuController: NSObject, NSMenuDelegate, NSWindowDelegate, MenuCont
     /// - parameter sender: The object that sent the action.
     @IBAction func editRules(_ sender: AnyObject) {
         guard rulesController == nil else {
-            rulesController?.window?.orderFrontRegardless()
+            rulesController?.window?.makeKeyAndOrderFront(self)
+            rulesController?.window?.makeMain()
+            NSApp.activate(ignoringOtherApps: true)
             return
         }
         rulesController = RulesEditorWindowController.instantiate()
         rulesController?.window?.delegate = self
-        rulesController?.window?.orderFrontRegardless()
+        rulesController?.window?.makeKeyAndOrderFront(self)
+        rulesController?.window?.makeMain()
+        NSApp.activate(ignoringOtherApps: true)
     }
     
     /// Show the *About* window.
@@ -184,12 +188,16 @@ class StatusMenuController: NSObject, NSMenuDelegate, NSWindowDelegate, MenuCont
     /// - parameter sender: The object that sent the action.
     @IBAction func showRunningApps(_ sender: AnyObject) {
         guard runningAppsController == nil else {
-            runningAppsController?.window?.orderFrontRegardless()
+            runningAppsController?.window?.makeKeyAndOrderFront(self)
+            runningAppsController?.window?.makeMain()
+            NSApp.activate(ignoringOtherApps: true)
             return
         }
         runningAppsController = RunningAppWindowController.instantiate()
         runningAppsController?.window?.delegate = self
-        runningAppsController?.window?.orderFrontRegardless()
+        runningAppsController?.window?.makeKeyAndOrderFront(self)
+        runningAppsController?.window?.makeMain()
+        NSApp.activate(ignoringOtherApps: true)
     }
     
     

@@ -10,7 +10,7 @@
         <scene sceneID="Ixx-p7-6Qw">
             <objects>
                 <windowController showSeguePresentationStyle="single" id="W33-Be-Q5Y" customClass="RulesEditorWindowController" customModule="Fluor" customModuleProvider="target" sceneMemberID="viewController">
-                    <window key="window" title="Rules" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="Fluor_EditRulesWindowAutosaveName" animationBehavior="default" id="eXk-yp-Np1" customClass="NSPanel">
+                    <window key="window" title="Rules" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="Fluor_EditRulesWindowAutosaveName" animationBehavior="default" id="eXk-yp-Np1">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" resizable="YES" fullSizeContentView="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="196" y="240" width="320" height="480"/>
@@ -104,7 +104,6 @@
                                                                             <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" image="NSApplicationIcon" id="2Fc-hq-NCR"/>
                                                                             <connections>
                                                                                 <binding destination="Kqn-bd-jZp" name="value" keyPath="objectValue.icon" id="WuV-6R-C9q"/>
-                                                                                <binding destination="Kqn-bd-jZp" name="toolTip" keyPath="objectValue.url.path" id="anr-Hc-yQM"/>
                                                                             </connections>
                                                                         </imageView>
                                                                         <stackView distribution="fill" orientation="vertical" alignment="leading" spacing="4" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="agd-lq-cct">
@@ -173,9 +172,6 @@
                                                     </prototypeCellViews>
                                                 </tableColumn>
                                             </tableColumns>
-                                            <connections>
-                                                <binding destination="yyu-qn-zGG" name="selectionIndexes" keyPath="selectionIndexes" id="uAd-Ml-lCd"/>
-                                            </connections>
                                         </tableView>
                                     </subviews>
                                     <nil key="backgroundColor"/>
