@@ -220,7 +220,7 @@
                 </viewController>
                 <customObject id="xpC-Av-Pb6" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <customObject id="eCo-0m-X2M" customClass="LaunchAtLoginController"/>
-                <customObject id="YAM-vM-LLT" customClass="SUUpdater"/>
+                <customObject id="YAM-vM-LLT" customClass="SPUStandardUpdaterController"/>
                 <userDefaultsController representsSharedInstance="YES" id="XlE-y8-iHG"/>
             </objects>
             <point key="canvasLocation" x="772" y="96"/>
@@ -532,7 +532,7 @@
                     </view>
                 </viewController>
                 <customObject id="uno-mT-3BM" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
-                <customObject id="AeM-5q-gZ3" customClass="SUUpdater"/>
+                <customObject id="AeM-5q-gZ3" customClass="SPUStandardUpdaterController"/>
             </objects>
             <point key="canvasLocation" x="772" y="783"/>
         </scene>
