@@ -220,7 +220,6 @@
                 </viewController>
                 <customObject id="xpC-Av-Pb6" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <customObject id="eCo-0m-X2M" customClass="LaunchAtLoginController"/>
-                <customObject id="YAM-vM-LLT" customClass="SPUStandardUpdaterController"/>
                 <userDefaultsController representsSharedInstance="YES" id="XlE-y8-iHG"/>
             </objects>
             <point key="canvasLocation" x="772" y="96"/>
@@ -420,7 +419,7 @@
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
                                         <connections>
-                                            <binding destination="AeM-5q-gZ3" name="value" keyPath="self.automaticallyChecksForUpdates" id="zrL-1G-Aec"/>
+                                            <binding destination="AeM-5q-gZ3" name="value" keyPath="self.updater.automaticallyChecksForUpdates" id="zrL-1G-Aec"/>
                                         </connections>
                                     </button>
                                     <stackView distribution="fill" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="750" verticalHuggingPriority="750" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="18z-fd-v5J">
@@ -433,7 +432,7 @@
                                                     <font key="font" metaFont="system"/>
                                                 </buttonCell>
                                                 <connections>
-                                                    <binding destination="AeM-5q-gZ3" name="value" keyPath="self.automaticallyDownloadsUpdates" id="FMx-vj-v0Z"/>
+                                                    <binding destination="AeM-5q-gZ3" name="value" keyPath="self.updater.automaticallyDownloadsUpdates" id="FMx-vj-v0Z"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -470,7 +469,7 @@
                                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                         </textFieldCell>
                                                         <connections>
-                                                            <binding destination="AeM-5q-gZ3" name="value" keyPath="self.lastUpdateCheckDate" id="oRH-3d-Kq9"/>
+                                                            <binding destination="AeM-5q-gZ3" name="value" keyPath="self.updater.lastUpdateCheckDate" id="oRH-3d-Kq9"/>
                                                         </connections>
                                                     </textField>
                                                 </subviews>
