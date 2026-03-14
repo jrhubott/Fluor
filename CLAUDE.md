@@ -60,8 +60,14 @@ Bridged via `Fluor-Bridging-Header.h`:
 ### SPM Dependencies
 
 - **DefaultsWrapper** — `@Defaults` property wrapper for typed UserDefaults access
-- **Sparkle** (v2.x) — auto-update framework (`SPUStandardUpdaterController` in Preferences.storyboard)
+- **Sparkle** (v2.x) — auto-update framework (bindings go through `self.updater.*` key paths in Preferences.storyboard)
 - **CoreGeometry** / **SmoothOperators** — geometry utilities and operator extensions
+
+## Gotchas
+
+- **KVO + `@objc let` properties**: Storyboard bindings using nested key paths through `@objc let` stored properties (e.g., `objectValue.url.path` where `url` is `let`) crash on modern macOS — KVO can't create an ivar setter for constants. Use a `@objc dynamic var` computed wrapper instead, or avoid nested paths through `let` properties.
+- **Window display pattern**: Use `makeKeyAndOrderFront(self)` + `makeMain()` + `NSApp.activate(ignoringOtherApps:)` to show windows. Do not use `orderFrontRegardless()`.
+- **Storyboard debugging**: When investigating storyboard-related crashes, always request the crash backtrace — code review alone is insufficient for KVO/binding issues.
 
 ## Commit Guidelines
 

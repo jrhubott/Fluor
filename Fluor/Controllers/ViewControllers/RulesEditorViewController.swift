@@ -50,10 +50,13 @@ class RulesEditorViewController: NSViewController, BehaviorDidChangeObserver {
         
         self.rulesSet = AppManager.default.rules
         
+        tableView.bind(.selectionIndexes, to: itemsArrayController!, withKeyPath: "selectionIndexes", options: nil)
+
         self.tableContentAnimator = TableViewContentAnimator(tableView: tableView, arrayController: itemsArrayController)
     }
-    
+
     deinit {
+        tableView.unbind(.selectionIndexes)
         stopObservingBehaviorDidChange()
         itemsArrayController.removeObserver(self, forKeyPath: "canRemove")
         itemsArrayController.removeObserver(self, forKeyPath: "canAdd")
