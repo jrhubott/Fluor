@@ -109,6 +109,7 @@ class CurrentAppViewController: NSViewController, BehaviorDidChangeObserver, Act
     
     func activeApplicationDidChangw(notification: Notification) {
         guard let app = notification.userInfo?[NSWorkspace.applicationUserInfoKey] as? NSRunningApplication else { return }
+        guard app.bundleIdentifier != Bundle.main.bundleIdentifier else { return }
         self.setCurrent(app: app)
     }
     

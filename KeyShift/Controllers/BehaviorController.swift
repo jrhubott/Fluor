@@ -108,6 +108,7 @@ class BehaviorController: NSObject, BehaviorDidChangeObserver, DefaultModeViewCo
         self.adaptToAccessibilityTrust()
         guard let app = notification.userInfo?[NSWorkspace.applicationUserInfoKey] as? NSRunningApplication,
             let id = app.bundleIdentifier ?? app.executableURL?.lastPathComponent else { return }
+        guard id != Bundle.main.bundleIdentifier else { return }
         self.currentAppName = app.localizedName
         self.currentAppID = id
         self.currentAppURL = app.bundleURL

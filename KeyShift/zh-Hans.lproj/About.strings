@@ -2,8 +2,8 @@
 /* Class = "NSButtonCell"; title = "Release notes"; ObjectID = "3LZ-kH-mRF"; */
 "3LZ-kH-mRF.title" = "发行说明";
 
-/* Class = "NSTextFieldCell"; title = "Copyright (c) Pyrolyse 2016-2019"; ObjectID = "D9M-Xx-uVv"; */
-"D9M-Xx-uVv.title" = "版权所有 (c) Pyrolyse 2016-2019";
+/* Class = "NSTextFieldCell"; title = "Copyright © 2026 Rhusoft"; ObjectID = "D9M-Xx-uVv"; */
+"D9M-Xx-uVv.title" = "Copyright © 2026 Rhusoft";
 
 /* Class = "NSButtonCell"; title = "Update"; ObjectID = "DN8-JH-bOp"; */
 "DN8-JH-bOp.title" = "更新";

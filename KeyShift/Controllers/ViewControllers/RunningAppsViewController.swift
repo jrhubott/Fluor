@@ -64,6 +64,7 @@ class RunningAppsViewController: NSViewController, NSTableViewDelegate {
         guard let app = notification.userInfo?[NSWorkspace.applicationUserInfoKey] as? NSRunningApplication,
             let id = app.bundleIdentifier ?? app.executableURL?.lastPathComponent,
             let url = app.bundleURL ?? app.executableURL else { return }
+        guard id != Bundle.main.bundleIdentifier else { return }
         let isApp = app.activationPolicy == .regular
         guard self.showAll || isApp else { return }
         let behavior = AppManager.default.behaviorForApp(id: id)
@@ -95,12 +96,13 @@ class RunningAppsViewController: NSViewController, NSTableViewDelegate {
     private func getRunningApps() -> [RunningApp] {
         return NSWorkspace.shared.runningApplications.compactMap { (app) -> RunningApp? in
             guard let id = app.bundleIdentifier ?? app.executableURL?.lastPathComponent, let url = app.bundleURL ?? app.executableURL else { return nil }
+            guard id != Bundle.main.bundleIdentifier else { return nil }
             let isApp = app.activationPolicy == .regular
             guard showAll || isApp else { return nil }
-            
+
             let behavior = AppManager.default.behaviorForApp(id: id)
             let pid = app.processIdentifier
-            
+
             return RunningApp(id: id, url: url, behavior: behavior, pid: pid, isApp: isApp)
         }
     }
