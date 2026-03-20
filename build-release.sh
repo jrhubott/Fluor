@@ -1,9 +1,9 @@
 #!/bin/bash
 set -euo pipefail
 
-SCHEME="Fluor"
+SCHEME="KeyShift"
 CONFIG="Release"
-APP_NAME="Fluor.app"
+APP_NAME="KeyShift.app"
 DEVELOPER_DIR="/Applications/Xcode.app/Contents/Developer"
 
 echo "Building $SCHEME ($CONFIG)..."

@@ -61,6 +61,6 @@ fastlane/screenshots
 
 # Documentation
 Documentation/docs
-/Fluor/Sparkle.framework
-/Fluor/Sparkle.framework.dSYM
+/KeyShift/Sparkle.framework
+/KeyShift/Sparkle.framework.dSYM
 .DS_Store

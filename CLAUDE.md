@@ -6,17 +6,17 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ```bash
 # Build (requires Xcode; use DEVELOPER_DIR if xcode-select points to CommandLineTools)
-DEVELOPER_DIR=/Applications/Xcode.app/Contents/Developer xcodebuild -scheme Fluor -configuration Debug build
+DEVELOPER_DIR=/Applications/Xcode.app/Contents/Developer xcodebuild -scheme KeyShift -configuration Debug build
 
 # Build without code signing (for development without matching certificates)
-DEVELOPER_DIR=/Applications/Xcode.app/Contents/Developer xcodebuild -scheme Fluor -configuration Debug build CODE_SIGN_IDENTITY="-" CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO
+DEVELOPER_DIR=/Applications/Xcode.app/Contents/Developer xcodebuild -scheme KeyShift -configuration Debug build CODE_SIGN_IDENTITY="-" CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO
 ```
 
 There are no tests in this project. The project uses Xcode (not Swift Package Manager) as its build system.
 
 ## Architecture
 
-Fluor is a macOS status bar app (Swift 5 / AppKit) that switches the keyboard's fn-key behavior (media keys vs F1-F12) based on the active application.
+KeyShift is a macOS status bar app (Swift 5 / AppKit) that switches the keyboard's fn-key behavior (media keys vs F1-F12) based on the active application.
 
 ### Core Flow
 
@@ -53,7 +53,7 @@ Components communicate via paired Notification observer/poster protocols defined
 
 ### Objective-C Interop
 
-Bridged via `Fluor-Bridging-Header.h`:
+Bridged via `KeyShift-Bridging-Header.h`:
 - **LaunchAtLoginController** — manages login item registration
 - **PFMoveApplication** — prompts to move app to /Applications (RELEASE builds only)
 
